@@ -17,8 +17,8 @@ describe('Application Homepage', function() {
     messageBox.sendKeys('write first protractor test');
     element(by.id('btn_send')).click();
     var messenger_text = element(by.model('comment'));
-    console.log(messenger_text.getAttribute('value'));
-    expect(messenger_text.getAttribute('value')).toEqual('write first protractor test');
+    //console.log(messenger_text.getAttribute('value'));
+    expect(messenger_text.getAttribute('value')).toContain('write first protractor test');
   });
 
 }); 

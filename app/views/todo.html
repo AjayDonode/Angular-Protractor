@@ -1,0 +1,26 @@
+<div class="panel">
+    <div class="form">
+        <h1 class="messanger_header">TODO App</h1>
+        <hr>
+        <div class="col-lg-12">
+            <div class="input-group">
+                <input type="text" name="todotxt" class="form-control" ng-model="todotxt">
+                <span class="input-group-btn">
+        			<button class="btn btn-default" type="button" ng-click="addTodo()"><span class="glyphicon glyphicon-plus"></span></button>
+                </span>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <ul ng-repeat="item in todolist">
+                <div class="col-lg-12 todo-label"><input type="checkbox" ng-model="item.marked"> {{item.text}} </div>
+            </ul>
+        </div>
+        <hr>
+
+        <div class="btn-group col-lg-12">
+            <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-check"></button>
+            <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-trash"></button>
+        </div>
+    </div>
+</div>

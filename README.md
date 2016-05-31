@@ -22,4 +22,3 @@ Angular-Protractor Seed Project
 
 2. Open a new terminal and run Protractor:
 ./node_modules/.bin/protractor protractor.conf.js
-

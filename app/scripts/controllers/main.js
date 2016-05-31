@@ -13,5 +13,5 @@ angular.module('dnexappApp')
  	$scope.sendMessage = function(){
  		$scope.comment += $scope.messageText+"\n";
  		$scope.messageText = "";
- 	}
+ 	};
   });
