@@ -1,0 +1,45 @@
+<div class="panel">
+    <div class="form">
+        <div class="row">
+            <h3>File Upload Sample</h3>
+        </div>
+        <hr>
+        <section>
+            <div>
+                <div class="alert alert-danger" ng-show="isError">
+                    {{errormessage}}
+                </div>
+            </div>
+            <div class="row">
+                <label for="fileToUpload">Select a File to Upload
+                <br />
+                <input type="file" ng-model-instant id="fileToUpload" style="display: none;" onchange="angular.element(this).scope().setFiles(this)" accept=".xlsx, .xls" />
+                </label>
+            </div>
+
+
+            <div class="row">
+                <label class="btn btn-default btn-file">
+                    Browse
+                    <input type="file" style="display: none;">
+                </label>
+            </div>
+            <!--  <div class="fileinput fileinput-new" data-provides="fileinput">
+                <span class="btn btn-success btn-file" ng-model-instant id="fileToUpload"><span>Choose file</span>
+                <input type="file"  onchange="angular.element(this).scope().setFiles(this)"  />
+                </span>
+                <span class="fileinput-filename"></span><span class="fileinput-new">No file chosen</span>
+            </div> -->
+            
+            <div class="row">
+                <button type="button" class="btn btn-primary" ng-click="uploadFile()" value="Upload">Upload</button>
+                <div ng-show="progressVisible">
+                    <div class="percent">{{progress}}%</div>
+                    <div class="progress-bar">
+                        <div class="uploaded" ng-style="{'width': progress+'%'}"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

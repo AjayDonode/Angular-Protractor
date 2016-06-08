@@ -29,6 +29,12 @@ angular
         controller: 'TodoCtrl',
         controllerAs: 'todo'
       })
+     
+      .when('/fileupload', {
+        templateUrl: 'views/fileupload.html',
+        controller: 'FileUploadCtrl',
+        controllerAs: 'fileupload'
+      })
       .otherwise({
         redirectTo: '/'
       });
