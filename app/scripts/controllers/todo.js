@@ -17,18 +17,18 @@ angular.module('dnexappApp')
         //var todoItem = {"id":0, "text":"", "marked":false};
 
         $scope.enterTodo = function() {
-            if(event.keyCode == 13 && $scope.todotxt){
+            if (event.keyCode == 13 && $scope.todotxt) {
                 this.addTodo();
             }
         };
-        
+
         $scope.addTodo = function() {
             var item = {
                 "id": $scope.todolist.length,
                 "text": $scope.todotxt,
                 "marked": false
             };
-            
+
             $scope.todolist.push(item);
             $scope.todotxt = "";
             isVisibleFn();
@@ -50,7 +50,7 @@ angular.module('dnexappApp')
 
         };
 
-         $scope.checkAll = function() {
+        $scope.checkAll = function() {
 
             for (var i = 0; i < $scope.todolist.length; i++) {
                 var item = $scope.todolist[i]
@@ -59,9 +59,12 @@ angular.module('dnexappApp')
 
         };
 
-        var isVisibleFn = function(){
-            if($scope.todolist.length>0){ $scope.isVisible = true;}
-            else { $scope.isVisible = false;}
+        var isVisibleFn = function() {
+            if ($scope.todolist.length > 0) {
+                $scope.isVisible = true;
+            } else {
+                $scope.isVisible = false;
+            }
         }
 
 
